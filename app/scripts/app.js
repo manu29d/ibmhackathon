@@ -24,7 +24,7 @@ angular
     uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyAnP8o7oxfYthhi6Nlxu8FQMBhm1qRxU0g',
       v: '3.20',
-      libraries: 'weather,geometry,visualization'
+      libraries: 'places'
     });
   })
   .config(function ($routeProvider) {
@@ -33,6 +33,16 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
+      })
+      .when('/crime', {
+        templateUrl: 'views/crime.html',
+        controller: 'CrimeCtrl',
+        controllerAs: 'crime'
+      })
+      .when('/pollution', {
+        templateUrl: 'views/pollution.html',
+        controller: 'PollutionCtrl',
+        controllerAs: 'pollution'
       })
       .otherwise({
         redirectTo: '/'
