@@ -17,8 +17,16 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'uiGmapgoogle-maps'
   ])
+  .config(function (uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+      key: 'AIzaSyAnP8o7oxfYthhi6Nlxu8FQMBhm1qRxU0g',
+      v: '3.20',
+      libraries: 'weather,geometry,visualization'
+    });
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

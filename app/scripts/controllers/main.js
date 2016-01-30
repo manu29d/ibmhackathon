@@ -8,10 +8,9 @@
  * Controller of the ibmhackathonApp
  */
 angular.module('ibmhackathonApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, uiGmapGoogleMapApi) {
+    $scope.map = {center: {latitude: 19.4230512, longitude: 78.44712969999999}, zoom: 8};
+    uiGmapGoogleMapApi.then(function (maps) {
+      console.log(maps);
+    });
   });
