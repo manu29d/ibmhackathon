@@ -67,6 +67,9 @@
       <div class='info-column news'>
         <div class='news-item' ng-repeat="newsItem in ctrl.news">
           <p class='newsItem-text'>{{newsItem.text}}</p>
+          <div id='insurance'>
+            <p class='title'></p>
+          </div>
         </div>
       </div>
       </div>
@@ -116,5 +119,48 @@
         <script src="scripts/controllers/pollution.js"></script>
         <script src="scripts/services/crimeData.js"></script>
         <!-- endbuild -->
+
+    <script type="text/javascript">
+      $(window).load(function() {
+       
+       insurance_data = [ 'Apollo;http://travel.policybazaar.com/assets/images/apollo.jpg', 
+       'Bajaj Allianz;http://travel.policybazaar.com/assets/images/bajaj-allianz.jpg',
+       'Bharti Axa;http://travel.policybazaar.com/assets/images/bharti-axa.jpg',
+       'Future Gererali;http://travel.policybazaar.com/assets/images/future-generali.jpg',
+       'HDFC;http://travel.policybazaar.com/assets/images/hdfc.jpg',
+       'New India Insurance;http://travel.policybazaar.com/assets/images/new-india-assurance.jpg',
+       'Reliance;http://travel.policybazaar.com/assets/images/reliance.jpg',
+       'Religare;http://travel.policybazaar.com/assets/images/religare.jpg',
+       'Tata AIG;http://travel.policybazaar.com/assets/images/tata-aig.jpg',
+       'Universal Sompo Genral Insurance Company;ltd http://travel.policybazaar.com/assets/images/universal-sompo-general-insurance-company-ltd.jpg']
+
+       insurance_name_arr=[];
+       insurance_img_arr=[];
+
+       function getRandomInt(min, max) {
+           return Math.floor(Math.random() * (max - min + 1)) + min;
+       }
+       r1 = getRandomInt(0,insurance_data.length-4)
+
+       for(i=r1;i<r1+4;i++){
+        insurance_name_arr.push(insurance_data[i].split(';')[0]);
+        insurance_img_arr.push(insurance_data[i].split(';')[1]);
+        $("#insurance").append('<div>'+ insurance_data[i].split(';')[0]  +'</div>');
+        $("#insurance").append('<img src="'+ insurance_data[i].split(';')[1]  +'">');
+       }
+
+       if ( document.URL.includes('crime') ){
+        $("#insurance .title").text('The following insurance plans cover Accidental Death and Dismemberment Benefit,Emergency Accident Medical Expenses Reimbursement,Emergency medical evacuation');
+       }
+       if ( document.URL.includes('pollution') ){
+        $("#insurance .title").text('The following insurance plans cover Accident terminal illness, and health problems on the go.');
+       }       
+
+
+
+
+      });
+    </script>
+
 </body>
 </html>
