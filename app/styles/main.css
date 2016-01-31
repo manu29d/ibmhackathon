@@ -81,10 +81,13 @@ body {
     border-bottom: 0;
   }
 }
-.angular-google-map-container { height: 100vh; width: calc(100vw - 400px); float: left }
+.angular-google-map-container { height: 100vh; width: calc(100vw - 450px); float: left }
 .side-bar{ width: 200px; height: 100vh; z-index: 5; position: relative }
 .left-bar {float: left}
-.right-bar {float: right}
-.info-column {height: 50vh}
-.info-column.tweets, .info-column > div > p {border-bottom: 1px solid #cecece}
+.right-bar {float: right; width: 250px;}
+.info-column {height: 50vh; overflow: auto}
+.info-column.tweets {border-bottom: 3px solid #cecece}
 .info-column > div {padding: 10px}
+.info-column > div > p {border-bottom: 1px solid #cecece}
+#insurance {position: fixed; bottom: 0; width:100vw; height: 150px; background: #fff; overflow: auto}
+#insurance * {float: left}

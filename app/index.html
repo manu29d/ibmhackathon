@@ -61,18 +61,18 @@
     <div class='side-bar right-bar' ng-controller='RightBarCtrl as ctrl'>
       <div class='info-column tweets'>
         <div class='tweet-item' ng-repeat="tweet in ctrl.tweets">
-          <p class='tweet-text'>{{tweet.text}}</p>
+          <p class='tweet-text'>{{tweet.message.body}}</p>
         </div>
       </div>
       <div class='info-column news'>
         <div class='news-item' ng-repeat="newsItem in ctrl.news">
           <p class='newsItem-text'>{{newsItem.text}}</p>
-          <div id='insurance'>
-            <p class='title'></p>
-          </div>
         </div>
       </div>
-      </div>
+    </div>
+    <div id='insurance'>
+      <p class='title'></p>
+    </div>
     <!--div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
