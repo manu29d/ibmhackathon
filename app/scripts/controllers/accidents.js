@@ -20,6 +20,7 @@
       function populateMarkers(data) {
         self.markers = data.map(function (obj, index) {
           obj.id = index;
+          obj.icon = 'http://inthespace.net/graphics/icon_google_maps2.png' 
           return obj;
         });
       }
