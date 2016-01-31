@@ -89,5 +89,4 @@ body {
 .info-column.tweets {border-bottom: 3px solid #cecece}
 .info-column > div {padding: 10px}
 .info-column > div > p {border-bottom: 1px solid #cecece}
-#insurance {position: fixed; bottom: 0; width:100vw; height: 150px; background: #fff; overflow: auto}
-#insurance * {float: left}
+#insurance {position: fixed; bottom: 0; width:100vw; height: 200px; background: #fff; overflow: auto;  border-top: 3px solid #cecece}

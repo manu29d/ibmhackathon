@@ -50,7 +50,7 @@
 
       <div class='side-bar left-bar' ng-controller='LeftBarCtrl as ctrl'>
         <ul class='nav nav-pills nav-stacked' style="height:80%">
-          <li ng-repeat="obj in ctrl.navItems" style="height:27%; background-image:url({{obj.image}})" ng-class='{active: ctrl.chosen === obj.url.substr(1)}' ng-click="ctrl.chosen = obj.url.substr(1)">
+          <li ng-repeat="obj in ctrl.navItems" style="height:28%; background-image:url({{obj.image}})" ng-class='{active: ctrl.chosen === obj.url.substr(1)}' ng-click="ctrl.chosen = obj.url.substr(1)">
             <a ng-href="{{obj.url}}">{{obj.title}}</a>
           </li>
         </ul>
@@ -65,13 +65,14 @@
         </div>
       </div>
       <div class='info-column news'>
+        <h4> NEWS </h4>
         <div class='news-item' ng-repeat="newsItem in ctrl.news">
           <p class='newsItem-text'>{{newsItem.text}}</p>
         </div>
       </div>
     </div>
     <div id='insurance'>
-      <p class='title'></p>
+      <h4 class='title'></h4>
     </div>
     <!--div class="footer">
       <div class="container">
@@ -129,12 +130,12 @@
        insurance_data = [ 'Apollo;http://travel.policybazaar.com/assets/images/apollo.jpg', 
        'Bajaj Allianz;http://travel.policybazaar.com/assets/images/bajaj-allianz.jpg',
        'Bharti Axa;http://travel.policybazaar.com/assets/images/bharti-axa.jpg',
-       'Future Gererali;http://travel.policybazaar.com/assets/images/future-generali.jpg',
-       'HDFC;http://travel.policybazaar.com/assets/images/hdfc.jpg',
-       'New India Insurance;http://travel.policybazaar.com/assets/images/new-india-assurance.jpg',
-       'Reliance;http://travel.policybazaar.com/assets/images/reliance.jpg',
-       'Religare;http://travel.policybazaar.com/assets/images/religare.jpg',
-       'Tata AIG;http://travel.policybazaar.com/assets/images/tata-aig.jpg',
+       'Future Gererali;http://insurance.gibl.in/wp-content/themes/GIBL%20New/images/logos/future.png',
+       'HDFC;https://upload.wikimedia.org/wikipedia/commons/b/b5/HDFC-Life-Logo.jpg',
+       'New India Insurance;http://bsmedia.business-standard.com/_media/bs/img/article/2013-02/05/full/1360074119-7399.jpg',
+       'Reliance;http://www.cityinfodata.in/wp-content/uploads/2014/08/16.jpg',
+       'Religare;http://www.indiafinancebazaar.com/sites/default/files/imagecache/280px-width/news/religare-logo.jpg',
+       'Tata AIG;http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0014/6212/brand.gif?itok=qyQn2VtV',
        'Universal Sompo Genral Insurance Company;ltd http://travel.policybazaar.com/assets/images/universal-sompo-general-insurance-company-ltd.jpg']
 
        insurance_name_arr=[];
@@ -148,8 +149,8 @@
        for(i=r1;i<r1+4;i++){
         insurance_name_arr.push(insurance_data[i].split(';')[0]);
         insurance_img_arr.push(insurance_data[i].split(';')[1]);
-        $("#insurance").append('<div>'+ insurance_data[i].split(';')[0]  +'</div>');
-        $("#insurance").append('<img src="'+ insurance_data[i].split(';')[1]  +'">');
+        $("#insurance").append('<div class="center-block">'+ insurance_data[i].split(';')[0]  +'</div>');
+        $("#insurance").append('<img class="center-block" src="'+ insurance_data[i].split(';')[1]  +'">');
        }
 
        if ( document.URL.includes('crime') ){

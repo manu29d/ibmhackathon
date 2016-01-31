@@ -15,7 +15,7 @@
         self.tweets = $location.path().substr(1) && tweets.data.results[$location.path().substr(1)].tweets
       });
       this.news = [{
-        text: 'Someone made a news out of it'
-      }];
+        text: 'Bangalore Rider Dies in Race Track Accident.'
+      }, { text: 'Amazon employees looted; victims claim cops refused to help.' }];
     });
 })();
