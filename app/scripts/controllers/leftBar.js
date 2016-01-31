@@ -19,6 +19,10 @@
         {
           title: 'Pollution',
           url: '#/pollution'
+        },
+        {
+          title: 'Accident',
+          url: '#/accident'
         }
       ];
     });

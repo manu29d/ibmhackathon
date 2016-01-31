@@ -44,6 +44,11 @@ angular
         controller: 'PollutionCtrl',
         controllerAs: 'pollution'
       })
+      .when('/accident', {
+        templateUrl: 'views/accident.html',
+        controller: 'AccidentCtrl',
+        controllerAs: 'accident'
+      })
       .otherwise({
         redirectTo: '/'
       });
