@@ -14,15 +14,18 @@
       this.navItems = [
         {
           title: 'Crime',
-          url: '#/crime'
+          url: '#/crime',
+	  image: 'images/crime.jpg'
         },
         {
           title: 'Pollution',
-          url: '#/pollution'
+          url: '#/pollution',
+	  image: 'images/pollution.jpeg'
         },
         {
           title: 'Accident',
-          url: '#/accident'
+          url: '#/accident',
+	  image: 'images/accident.jpg'
         }
       ];
     });
