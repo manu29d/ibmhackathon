@@ -1,1 +1,5 @@
-<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+<ui-gmap-google-map center='crime.map.center' zoom='crime.map.zoom'>
+<ui-gmap-markers models='crime.markers' coords="'self'" icon="'icon'" type="'cluster'">
+<!--ui-gmap-window isIconVisibleOnClick="false" -->
+</ui-gmap-markers>
+</ui-gmap-google-map>
